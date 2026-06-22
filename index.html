@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테트리스</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">테트리스</h1>
+
+    <div class="game-layout">
+      <section class="board-section" aria-label="게임 보드">
+        <div class="board-wrapper">
+          <div id="board" class="board"></div>
+          <div id="game-over" class="game-over" hidden>
+            <p class="game-over-title">게임 오버</p>
+            <p class="game-over-hint">재시작 버튼을 눌러주세요</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="preview-column">
+        <div class="panel hold-panel">
+          <h2>보관</h2>
+          <div id="hold-board" class="mini-board" aria-label="보관함"></div>
+        </div>
+
+        <div class="panel next-panel">
+          <h2>다음</h2>
+          <div id="next-list" class="next-list" aria-label="다음 블록 목록"></div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="panel score-panel">
+          <h2>점수</h2>
+          <p id="score" class="score-value">0</p>
+        </div>
+
+        <div class="panel controls-panel">
+          <h2>조작법</h2>
+          <ul class="controls-list">
+            <li><kbd>←</kbd> <kbd>→</kbd> 좌우 이동</li>
+            <li><kbd>↓</kbd> 빠르게 내리기</li>
+            <li><kbd>↑</kbd> 회전 (회전 유예)</li>
+            <li><kbd>Space</kbd> 즉시 낙하</li>
+            <li><kbd>Shift</kbd> 보관 / 교환</li>
+          </ul>
+        </div>
+
+        <div class="button-group">
+          <button id="start-btn" type="button">시작</button>
+          <button id="restart-btn" type="button">재시작</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
